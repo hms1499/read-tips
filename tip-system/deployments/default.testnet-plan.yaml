@@ -1,0 +1,19 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: tips-contract
+            expected-sender: ST3JMRWQC0WRZCZH4ZFETJVT5VZFS0AR4FX349HET
+            cost: 6940
+            path: contracts/tips-contract.clar
+            anchor-block-only: true
+            clarity-version: 4
+      epoch: "2.5"
+
